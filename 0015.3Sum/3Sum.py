@@ -52,7 +52,9 @@ class Solution_Fast:
             for j in range(i + 1, len(set1)):
                 l = -set1[i] - set1[j]
                 if l in d:
-                    if (d[l] == 1 and l != set1[i] and l != set1[j]) or (d[l] == 2 and (l != set1[i] or l != set1[j])) or (d[l] > 2):
+                    if (d[l] == 1 and l != set1[i] and l != set1[j]) \
+                    or (d[l] == 2 and (l != set1[i] or l != set1[j])) \
+                    or (d[l] > 2):
                         temp = [set1[i], set1[j], l]
                         temp.sort()
                         result.add(tuple(temp))
